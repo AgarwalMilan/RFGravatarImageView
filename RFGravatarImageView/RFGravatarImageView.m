@@ -143,6 +143,17 @@
             case RFDefaultGravatarBlank:
                 [baseLink appendString:@"&default=blank"];
                 break;
+            case RFDefaultGravatarUrlSupplied:
+            {
+                NSString *defaultGravatarUrlString = self.defaultGravatarUrl.absoluteString;
+                if (defaultGravatarUrlString.length > 0) {
+                    
+                    [baseLink appendFormat:@"&default=%@",defaultGravatarUrlString];
+                
+                }
+               
+            }
+                break;
                 
             default:
                 break;
