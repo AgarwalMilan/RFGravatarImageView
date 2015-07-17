@@ -83,7 +83,11 @@ typedef NS_ENUM(NSUInteger, RFDefaultGravatar) {
     /**
      *  Blank Gravatar.
      */
-    RFDefaultGravatarBlank
+    RFDefaultGravatarBlank,
+    /**
+     *  Url Supplied Gravatar.
+     */
+    RFDefaultGravatarUrlSupplied
 };
 
 
@@ -113,6 +117,12 @@ typedef NS_ENUM(NSUInteger, RFDefaultGravatar) {
  *  If email doesn't have a gravatar, use one of these... http://bit.ly/1cCmtdb
  */
 @property (readwrite, nonatomic) RFDefaultGravatar defaultGravatar;
+
+/**
+ *  Provide the web url of the image you want to use as default Gravatar and set defaultGravatar option to RFDefaultGravatarUrlSupplied
+ */
+@property (readwrite, nonatomic) NSURL *defaultGravatarUrl;
+
 
 /**
  *  Forces a default gravatar, whether or not email has gravatar.  Remember to set defaultGravatar too!
